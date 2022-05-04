@@ -1,0 +1,6 @@
+{% load static %}
+{% if cat.pk == NONE %}
+    {% for art in articles %}
+    {% include 'mainapp/includes/inc_article.html' %}
+    {% endfor %}
+{% endif %}

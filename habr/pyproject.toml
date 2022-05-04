@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "habr"
+version = "0.1.0"
+description = "Practice project of GeekBrains students group"
+authors = ["Антон Казаков", "Евгений Есин", "Василий Туртугешев", "Мария Панова", "Наталья Комарова", "Никита", "Александр", "Артемий"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0.4"
+psycopg2-binary = "^2.9.3"
+django-filter = "21.1"
+djangorestframework = "3.13.1"
+importlib-metadata = "4.11.3"
+Markdown = "3.3.6"
+pytz = "2022.1"
+sqlparse = "0.4.2"
+tzdata = "2022.1"
+zipp = "3.8.0"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

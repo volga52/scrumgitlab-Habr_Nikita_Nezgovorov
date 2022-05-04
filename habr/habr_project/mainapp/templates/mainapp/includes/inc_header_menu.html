@@ -1,0 +1,10 @@
+<nav class="page_nav">
+    <ul class="nav_list flex flex-row text-base grow space-x-8">
+        {% for cat in categorys %}
+        <li class="nav_list__item"><a href="{% url 'articles:category' pk=cat.pk %}">{{ cat.name }}</a></li>
+        {% endfor %}
+{#        <li class="nav_list__item"><a href="web-dev/">Веб-разработка</a></li>#}
+{#        <li class="nav_list__item"><a href="mobile-dev/">Мобильная разработка</a></li>#}
+{#        <li class="nav_list__item"><a href="marketing/">Маркетинг</a></li>#}
+    </ul>
+</nav>

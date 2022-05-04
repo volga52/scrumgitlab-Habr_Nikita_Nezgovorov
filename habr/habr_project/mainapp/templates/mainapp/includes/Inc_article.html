@@ -1,0 +1,38 @@
+{% load static %}
+<article class="article_on_the_page w-[595px] shadow-lg mb-[27px]">
+    <div class="article-header flex flex-row justify-between mb-2.5">
+        <div class="author mt-2.5 ml-5 items-center">
+            <p class="text-sm">автор</p>
+            <p class="author_pseudonim textt-base font-bold">Иван Сергеев</p>
+        </div>
+        <ul class="socials mt-2.5 flex flex-row items-center">
+            <li>
+                <a href="#"><img src="{% static '/img/vk.png' %}" alt="Вктонтакте" class="w-5 h-5"></a>
+            </li>
+            <li>
+                <a href="#"><img src="{% static '/img/telegram.png' %}" alt="Telegram" class="w-5 h-5 ml-1"></a>
+            </li>
+            <li>
+                <a href="#"><img src="{% static '/img/gitlab.png' %}" alt="Github"
+                                 class="w-5 h-5 ml-1 mr-5"></a>
+            </li>
+        </ul>
+    </div>
+    <img src="/media/{{ article.img }}" alt="картинка-превью статьи"
+         class="atricle_preview_picture w-[555px] h-[380px] bg-orange-600 ml-5 mb-[24px]">
+    <h2 class="article_title text-[22px] text-justify font-bold w-[552px] ml-[20px] mb-[10px]">{{ art.title }}</h2>
+    <p class="article_text w-[552px] ml-[20px] mb-[7px] text-justify text-[12px]">{{ art.text }}</p>
+    <div class="article-footer flex flex-row mb-[11px]">
+        <a href=" {% url 'articles:detail' art.pk %} "
+           class="read_more_button ml-[20px] mr-[380px] text-[12px] text-gray-600 text-left">Читать далее...
+        </a>
+        <button class="likes flex flex-row mr-[16px]">
+            <p>10</p>
+            <img src="{% static '/img/like.png' %}" alt="лайки">
+        </button>
+        <a href="#" class="comments flex flex-row">
+            <p>3</p>
+            <img src="{% static '/img/comment.png' %}" alt="комментарии">
+        </a>
+    </div>
+</article>

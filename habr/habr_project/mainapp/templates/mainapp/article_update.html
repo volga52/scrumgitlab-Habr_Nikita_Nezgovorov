@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="page_content">
+      <form class="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="" type="submit" value="Сохранить">
+      </form>
+      <button class="">
+        <a href="{% url 'articles:index' %}">
+          К списку категорий
+        </a>
+      </button>
+    </div>
+{% endblock %}

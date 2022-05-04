@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .search-input {
+        background-image: url("img/search.png");
+        background-repeat: none;
+    }
+}

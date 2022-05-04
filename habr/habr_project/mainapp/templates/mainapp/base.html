@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+    <header class="bg-neutral-300 h-14 flex flex-row justify-center space-x-44 items-center mb-2.5 sticky top-0">
+        <a href="/" class="logo"><img src="{% static 'img/logo.png' %}" alt="логотип" /></a>
+
+        {% block menu %}
+        {% endblock %}
+
+        <a href="login/" class="login_button text-base">Вход</a>
+    </header>
+
+    <main class="page_content flex flex-col items-center">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="page_footer bg-neutral-300 h-[60px] flex flex-row justify-center sticky bottom-0">
+        <div class="container w-[1024px] flex items-center">
+            <a href="cite_help/" class="cite_help flex flex-row items-center">
+                <img src="{% static '/img/help.png' %}" alt="помощь по сайту" class="w-[10px] h-[15px] mr-[4px]"/>
+                <p>Помощь по сайту</p>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
